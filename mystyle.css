@@ -1,0 +1,32 @@
+*{
+    color:black;
+    text-align:left;
+    text-decoration:none;
+    
+}
+h2{
+    background: hsl(0, 100%, 50%);
+    margin-left:25px;
+    padding: 10px;
+    border-style: solid;
+    border-radius: 20px;
+    border-color:violet;
+    border-width: 5px;
+}
+#who{
+    background-color: yellow;
+    padding-bottom: 30px;
+    border: 2px solid rgb(100, 2, 3);
+}
+#snacks{
+    margin: 25px;
+    border: 10px dotted #faf;
+}
+#nice{
+    width:20%;
+    margin:auto;
+    border: 2px solid color-mix(in srgb, red 50%, blue);
+}
+#date{
+    
+}
