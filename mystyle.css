@@ -121,7 +121,7 @@ title, h3, strong{
 
 }
 /*when we are using phone, this is applied. I had no idea so i set all features 
-to act simple*/
+to act simple as possible*/
 @media (max-width: 768px) {
     #nice, #date, #snacks, #topics, #who {
         position: static;
