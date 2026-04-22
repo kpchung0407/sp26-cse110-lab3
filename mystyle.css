@@ -1,32 +1,139 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double&display=swap');
+:root{
+    --color_rose: hsl(0, 100%, 50%);
+}
+*{  /* define color of text in general*/
     color:black;
     text-align:left;
-    text-decoration:none;
-    
+    text-decoration: none;
 }
+/*most section has title of h2, add unique font and border*/
 h2{
-    background: hsl(0, 100%, 50%);
+    font-family:"Bitcount Grid Double";
+    background: var(--color_rose, red);
     margin-left:25px;
     padding: 10px;
     border-style: solid;
     border-radius: 20px;
     border-color:violet;
     border-width: 5px;
+    text-decoration:underline;
 }
-#who{
+#who{/*form special feature asking who you are*/
     background-color: yellow;
     padding-bottom: 30px;
     border: 2px solid rgb(100, 2, 3);
 }
-#snacks{
-    margin: 25px;
+#snacks{ /*the dropdown menu, set unique border and margin, display*/
+    margin: 2cm;
     border: 10px dotted #faf;
+    display:inline;
 }
-#nice{
+#nice{ /* set unique border, used the color type srgb*/
+    max-width: 100px;
     width:20%;
     margin:auto;
     border: 2px solid color-mix(in srgb, red 50%, blue);
+    position:fixed;
 }
+/* uses display inline and position relative. use rem and em here */
 #date{
+    max-height: 100px;
+    height: 100%;
+    margin:0.5in;
+    font-size:2rem;
+    padding: 0.5em;
+    background-color: blue;
+    display:inline;
+    position: relative;
+}
+/*testing combination selectors parent, ancestor, sibling...etc*/
+header b{
+    background-color: aliceblue;
+    font-family:'Times New Roman';
+    font-size: xx-large;
+}
+footer > p{
+    background-color: rgb(205, 255, 254);
+}
+h2~details{
+    background-color: aquamarine;
+    font-family: serif;
+}
+h2+p{
+    background-color: cadetblue;
+    font-family: 'Times New Roman';
+}
+h2.chosen{
+    background-color: black;
+    color: aliceblue;
+    font-family: sans-serif;
+}
+/*give setting for chosen div*/
+div.chosen{
+    background-color: brown;
     
+}
+/*class selector*/
+.person{
+    background-color: blanchedalmond;
+    font-family: cursive;
+}
+/*using reference selector for href*/
+[href] {
+    background-color: #faf;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+/*use hover and active feature which changes color for interaction*/
+#nice:hover{
+    background-color: black;
+}
+title, h3, strong{
+    background-color:burlywood;
+    font-size:x-large;
+    font-weight: bold;
+}
+#text:active
+{
+    background-color: aquamarine;
+}   
+/*modern feautre of css, can select the child in the id*/
+#snacks:has(option) {
+    background-color: lightcyan;
+}
+/*this uses the nested select, but validator says error occured by this*/
+.attendance {
+    display: flex;               
+    justify-content:center; 
+    flex-flow: column wrap;              
+    gap:10px;
+    &:hover {    
+        background-color: blanchedalmond;      
+        padding: 5px;
+    }
+}
+#topics ul{
+    display:grid;
+    justify-items: end;
+    place-items: center;
+    gap:10px;
+
+}
+/*when we are using phone, this is applied. I had no idea so i set all features 
+to act simple*/
+@media (max-width: 768px) {
+    #nice, #date, #snacks, #topics, #who {
+        position: static;
+        display: block;
+        width: auto;
+    }
+    section, h2, title,header, p{
+        width: auto;
+        margin:10px;
+    }
+    .attendance{
+        width: auto;
+        padding: 10px;
+    }
 }
