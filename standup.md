@@ -30,3 +30,14 @@
 - might take long to validate the css code
 - not sure i am using css tools in a right way
 - it does not look pretty
+# Standup meeting 3
+## Date
+04/20/2027
+## Achievements 
+-finished css 100%
+-finished validation
+-put screenshots
+## Goals
+- submit on gradescope with this record done
+## Disturbances on development process
+- time is lacking right now
